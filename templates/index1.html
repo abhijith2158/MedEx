@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Health Chatbot</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .instructions {
+            margin-top: 30px;
+            font-weight: bold;
+        }
+        /* You can add a style for your QR code image here later */
+        img.qr-code {
+            margin-top: 20px;
+            width: 180px;
+            height: 180px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>AI Public Health Chatbot 🩺</h1>
+        <p>A project for the Smart India Hackathon to provide accessible and reliable health information via WhatsApp.</p>
+
+        <p class="instructions">
+            To start a conversation with our bot, please scan the QR code below with your phone or send "Hi" to our WhatsApp number.
+        </p>
+
+        </div>
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="Medex"
+  agent-id="3db38a01-b252-4291-b7d5-4416ba88362d"
+  language-code="en"
+></df-messenger>
+
+</body>
+</html>

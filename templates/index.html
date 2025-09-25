@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthBot - Your AI Health Assistant</title>
+    <style>
+        /* --- General Styles --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #343a40;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* --- Header & Navigation --- */
+        header {
+            background-color: #ffffff;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #007bff;
+        }
+        .logo span {
+            font-size: 1.2em;
+            vertical-align: middle;
+        }
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: #ffffff;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #007bff;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #e9ecef;
+        }
+        /* --- Sections --- */
+        section {
+            padding: 60px 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 40px;
+            color: #343a40;
+        }
+        .features-grid, .how-it-works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .feature-item, .how-it-works-item {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .feature-item h3, .how-it-works-item h3 {
+            font-size: 1.4em;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        .icon {
+            font-size: 3em;
+            color: #007bff;
+        }
+        /* --- QR Code Section --- */
+        .qr-section {
+            background-color: #e9ecef;
+            text-align: center;
+        }
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            margin-top: 20px;
+            border: 5px solid #ffffff;
+            border-radius: 8px;
+        }
+        /* --- Footer --- */
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+.qr-code {
+    width: 800px;
+    height: 450px;
+    margin-top: 20px;
+    border: 5px solid #ffffff;
+    border-radius: 8px;
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><span>🩺</span> HealthBot</div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Reliable Health Information, Instantly.</h1>
+            <p>Your AI-powered health assistant on WhatsApp, providing clear and simple answers to your health questions.</p>
+            <a href="#qr-code" class="cta-button">Chat on WhatsApp</a>
+        </div>
+    </section>
+
+    <section id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="how-it-works-grid">
+                <div class="how-it-works-item">
+                    <div class="icon">📱</div>
+                    <h3>1. Connect</h3>
+                    <p>Scan the QR code or save our number to start a chat on WhatsApp. No app download needed.</p>
+                </div>
+                <div class="how-it-works-item">
+                    <div class="icon">💬</div>
+                    <h3>2. Ask Anything</h3>
+                    <p>Ask questions about disease symptoms, prevention, or government health schemes in your own language.</p>
+                </div>
+                <div class="how-it-works-item">
+                    <div class="icon">💡</div>
+                    <h3>3. Get Answers</h3>
+                    <p>Receive instant, clear, and reliable information from our AI, available 24/7 to help you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <section id="qr-code" class="qr-section">
+        <div class="container">
+            <h2 class="section-title">Start Your Conversation</h2>
+            <p>Scan the QR code below with your phone's camera to instantly start a chat with HealthBot on WhatsApp.</p>
+
+            <img class="qr-code" src="{{ url_for('static', filename='Screenshot 2025-09-25 092803.png') }}" alt="WhatsApp QR Code">
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 HealthBot Team. A project for the Smart India Hackathon.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
